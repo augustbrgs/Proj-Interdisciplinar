@@ -62,7 +62,7 @@
         <!--fim da hero
         inicio da intro-->
         <section id="introducao">
-            <div class="spacer-nav"></div>
+            <div class="spacer-nav" id="mid"></div>
             <div class="intro">
                 <div class="intro-left">
                     <div class="intro-lefttop">
@@ -139,7 +139,7 @@
             FIM CAUSAS
             INICIO CONSEQUENCIAS
         -->
-        <div class="spacer-nav"></div>
+        <div class="spacer-nav" id="mid"></div>
         <section id="consequencias">
             <div class="causastitle">
                 <div class="causastop"></div>
@@ -296,34 +296,19 @@
             let scroll = this.scrollY;
             if (scroll < 800) {
                 $('#nav-inicio').addClass('scroll');
-                $('#nav-intro').removeClass('scroll');
-                $('#nav-causas').removeClass('scroll');
-                $('#nav-conseq').removeClass('scroll');
-                $('#nav-solu').removeClass('scroll');
+                $('#nav-intro, #nav-causas, #nav-conseq, #nav-solu').removeClass('scroll');
             } else if ((scroll >= 800) && (scroll < 1550)) {
-                $('#nav-inicio').removeClass('scroll');
+                $('#nav-inicio, #nav-causas, #nav-conseq, #nav-solu').removeClass('scroll');
                 $('#nav-intro').addClass('scroll');
-                $('#nav-causas').removeClass('scroll');
-                $('#nav-conseq').removeClass('scroll');
-                $('#nav-solu').removeClass('scroll');
             } else if ((scroll >= 1550) && (scroll < 3250)) {
-                $('#nav-inicio').removeClass('scroll');
-                $('#nav-intro').removeClass('scroll');
+                $('#nav-inicio, #nav-intro, #nav-conseq, #nav-solu').removeClass('scroll');
                 $('#nav-causas').addClass('scroll');
-                $('#nav-conseq').removeClass('scroll');
-                $('#nav-solu').removeClass('scroll');
             } else if ((scroll >= 3250) && (scroll < 5100)) {
-                $('#nav-inicio').removeClass('scroll');
-                $('#nav-intro').removeClass('scroll');
-                $('#nav-causas').removeClass('scroll');
+                $('#nav-inicio, #nav-intro, #nav-causas, #nav-solu').removeClass('scroll');
                 $('#nav-conseq').addClass('scroll');
-                $('#nav-solu').removeClass('scroll');
             } else {
-                $('#nav-inicio').removeClass('scroll');
-                $('#nav-intro').removeClass('scroll');
-                $('#nav-causas').removeClass('scroll');
-                $('#nav-conseq').removeClass('scroll');
-                $('#nav-solu').addClass('scroll'); //isso ta horrivel mas nada mais funcionava
+                $('#nav-inicio, #nav-intro, #nav-causas, #nav-conseq').removeClass('scroll');
+                $('#nav-solu').addClass('scroll');
             }
         });
     </script>
