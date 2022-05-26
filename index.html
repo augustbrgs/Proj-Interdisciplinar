@@ -24,22 +24,22 @@
             </div>
             <div class="links">
                 <a href="#introducao">
-                    <h3 id="nav-intro">Introdução</h3>
+                    <h3 class="scroll">Introdução</h3>
                 </a>
             </div>
             <div class="links">
                 <a href="#causas">
-                    <h3 id="nav-causas">Causas</h3>
+                    <h3 class="scroll">Causas</h3>
                 </a>
             </div>
             <div class="links">
                 <a href="#consequencias">
-                    <h3 id="nav-conseq">Consequências</h3>
+                    <h3 class="scroll">Consequências</h3>
                 </a>
             </div>
             <div class="links">
                 <a href="#solucoes">
-                    <h3 id="nav-solu">Soluções</h3>
+                    <h3 class="scroll">Soluções</h3>
                 </a>
             </div>
         </div>
@@ -57,7 +57,7 @@
                     <h2>ODS 13</h2>
                 </div>
             </div>
-            <div class="hero-right"></div>
+            <div id="hero-right"></div>
         </section>
         <!--fim da hero
         inicio da intro-->
@@ -65,7 +65,7 @@
             <div class="spacer-nav" id="mid"></div>
             <div class="intro">
                 <div class="intro-left">
-                    <div class="intro-lefttop">
+                    <div id="intro-lefttop">
                         <h2>Introdução à Mudança Climática</h2>
                     </div>
                     <div class="intro-leftbot">
@@ -133,7 +133,10 @@
                     </div>
                 </div>
                 <div class="dados-right"></div>
+
             </div>
+
+
         </section>
         <!--
             FIM CAUSAS
@@ -290,28 +293,6 @@
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <script>
-        window.addEventListener("scroll", (event) => {
-            let scroll = this.scrollY;
-            if (scroll < 800) {
-                $('#nav-inicio').addClass('scroll');
-                $('#nav-intro, #nav-causas, #nav-conseq, #nav-solu').removeClass('scroll');
-            } else if ((scroll >= 800) && (scroll < 1550)) {
-                $('#nav-inicio, #nav-causas, #nav-conseq, #nav-solu').removeClass('scroll');
-                $('#nav-intro').addClass('scroll');
-            } else if ((scroll >= 1550) && (scroll < 3250)) {
-                $('#nav-inicio, #nav-intro, #nav-conseq, #nav-solu').removeClass('scroll');
-                $('#nav-causas').addClass('scroll');
-            } else if ((scroll >= 3250) && (scroll < 5100)) {
-                $('#nav-inicio, #nav-intro, #nav-causas, #nav-solu').removeClass('scroll');
-                $('#nav-conseq').addClass('scroll');
-            } else {
-                $('#nav-inicio, #nav-intro, #nav-causas, #nav-conseq').removeClass('scroll');
-                $('#nav-solu').addClass('scroll');
-            }
-        });
-    </script>
 </body>
 
 </html>
